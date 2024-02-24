@@ -1,8 +1,0 @@
-pwd -  print working directory (where am i am )
-ls - list (list of directory)
-cd - Change directory(Change working directory)
-mkdir - Make directory (Make Folder)
-touch - to Create File (npm install touch-cli -g)
-del/rm - to remove files
-cd .. - to move back
-rmdir - to remove Folder
