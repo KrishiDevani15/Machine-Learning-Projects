@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Prediction</title>
+</head>
+<body>
+    <h2>Predicted Student Data</h2>
+    <div id="output"></div>
+
+    <script>
+        // JavaScript to fetch data from Flask route and display
+        fetch('/get_data')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('output').innerHTML = `
+                    <p><strong>Age:</strong> ${data.age}</p>
+                    <p><strong>Stream:</strong> ${data.stream}</p>
+                    <p><strong>Internships:</strong> ${data.internships}</p>
+                    <p><strong>CGPA:</strong> ${data.cgpa}</p>
+                    <p><strong>Hostel:</strong> ${data.hostel}</p>
+                    <p><strong>Backlogs:</strong> ${data.backlogs}</p>
+                `;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
