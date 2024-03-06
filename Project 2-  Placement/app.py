@@ -4,6 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
 
 app = Flask(__name__)
+print("hello world")
 
 # Load the HTML form for data entry
 @app.route('/')
